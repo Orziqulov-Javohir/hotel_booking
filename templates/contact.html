@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} 
+    Contact
+{% endblock  %}
+
+{% block nav %}
+  <li><a href="{%  url 'index' %}">Home</a></li>
+  <li><a href="{% url 'about' %}" >About</a></li>
+  <li><a href="{% url 'contact' %}" class="current">Contact</a></li>        
+{% endblock  %}
+
+{% block body %}
+    <section id="contact-form">
+        <div class="container" >
+            <h1>
+                <span class="text-primary" >Contact </span>US
+            </h1>
+            <p>Please fill out the form below to contact us</p>
+        <form method ='post'>
+            {% csrf_token %}
+            {{form.name}} <br> 
+            {{form.email}}<br> 
+            {{form.phone}}<br> 
+            {{form.message}}<br>
+            {% comment %} <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name"/>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email"/>
+            </div>
+            <div class="form-group">
+                <label for="integer">Phone number</label>
+                <input type="number" id="number" name="number"/>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea type="text" id="message" name="message"> </textarea>
+            </div> {% endcomment %}
+            <button class="btn">Submit</button>
+        </form>
+        </div>
+    </section>
+    <section id="contact-info" class="bg-dark">
+        <div class="container">
+            <div class="box">
+                <i class="fas fa-hotel fa-3x"></i>
+                <h3>Location</h3>
+                <p>Navoiy viloyati Karmana tumani</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-phone fa-3x"></i>
+                <h3>Phone Number</h3>
+                <p>+998904644647</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-envelope fa-3x"></i>
+                <h3>Email Address</h3>
+                <p>orziqulovjavohir16@gmail.com</p>
+            </div>
+        </div>
+    </section>
+    
+{% endblock  %}
+    

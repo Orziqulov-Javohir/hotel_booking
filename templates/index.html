@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock  %}
+
+{% block nav %}
+  <li><a href="{%  url 'index' %}" class = "current">Home</a></li>
+  <li><a href="{% url 'about' %}" >About</a></li>
+  <li><a href="{% url 'contact' %}">Contact</a></li>        
+{% endblock  %}
+        
+{% block body %}
+    <div id="showcase" style = background-image: url(' {% static "./images/photo_2021" %} ')>
+            <div class="container" >
+                <div class="showcase-content" >
+                    <h1><span class="text-primary">Enjoy</span>Your Stay</h1>
+                    <p>
+                    Our hotel is located in the city center of Navoi. With the full facilities, come and spend your holiday here.
+                    </p>
+                    <a href="{% url 'about' %}" class="btn" > About Us </a>
+                </div>
+                
+            </div>
+        </div>
+
+    <section id="home-info" class="bg-dark">
+        <div class="info-img"></div>
+        <div class="info-content">
+            <h2><span class="text-primary">The History  </span>Of our hotel </h2>
+            <p>Our hotel was built in 1995 and still attracts customers. This beautiful hotel has its own large swimming pool and many kitchens with full of Uzbek national dishes.</p>
+            <a href="{% url 'about' %}" class="btn btn-light" > Read More</a>
+        </div>    
+    </section>
+    <section id="features">
+        <div class="box bg-light">
+            <i class="fas fa-hotel fa-3x"></i>
+            <h3>Great Location</h3>
+            <p>You can take taxi easily from airport. Address : G'alaba shox 12</p>
+        </div>
+        <div class="box bg-primary">
+            <i class="fas fa-utensils fa-3x"></i>
+            <h3>Free Meals</h3>
+            <p>We provide  our guests with free breakfast and dinner. Chocolates also included...  </p>
+        </div>
+        <div class="box bg-light">
+            <i class="fas fa-dumbbell fa-3x"></i>
+            <h3>Fitness Room</h3>
+            <p>If you aren't lazy person this fully equipped training section is for you.</p>
+        </div>
+    </section>
+{% endblock %}       

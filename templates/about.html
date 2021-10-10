@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  About
+{% endblock  %}
+
+{% block nav %}
+  <li><a href="{%  url 'index' %}">Home</a></li>
+  <li><a href="{% url 'about' %}" class="current">About</a></li>
+  <li><a href="{% url 'contact' %}">Contact</a></li>        
+{% endblock %}
+
+{% block body %}
+  <section id="about-info" class="bg-light">
+      <div class="container">
+        <div class="info-left">
+          <h1><span class="text-primary">About</span> Our Hotel</h1>
+          <p>
+            The Grand Sultan Hotel is the most prestigious hotel in Navoi. He has served thousands of guests so far. If you would like to stay at our luxury hotel, please fill out the <a href ='{% url 'contact' %}' class="link-primary" style ='color:blue'> contact form </a>for more information and we will call back. 
+          </p>
+          <p>
+            We hope you visit here and will enjoy from Enjoy spectacular views and we totally sure you will not regret from your choice.
+          </p>
+        </div>
+        <div class="info-right">
+          <img src="{% static './images/pexels-konstantinos-eleftheriadis-2034335.jpg ' %} " alt="wonderfull hotel" />
+        </div>
+      </div>
+    </section>
+
+    <div class="clr"></div>
+    <section id="testimonials">
+        <div class="container">
+            <h2>What our guests say</h2>
+            <div class="testimonial bg-primary">
+                <img src="{% static './images/java.jpg' %}" height="90px"  alt="O Javohir"/>
+                <p>Last Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde facere adipisci iure consequuntur ducimus id, praesentium sed amet fugiat? year I traveled to Berlin and stayed this hotel. Honestly speaking, it was full of fun, great facilities for guests and excellent service. If you are planning to Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus itaque, numquam facere eos sed odio! visit this city highly recommend you stay here.</p>
+            </div>
+            <div class="testimonial bg-primary">
+              <img  src="{%static './images/photo_2021-01-15_06-13-33.jpg' %}"   alt="Ozodbek"/>
+              <p font-size:22px> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, qui! Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ipsa quas fuga ipsum? Eligendi, cumque veritatis itaque officia consequuntur delectus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quidem numquam placeat consequatur, animi earum? huge shopping mall just opposite of Hill Yard.</p>
+          </div>
+        
+        </div>
+    </section>
+    
+{% endblock %}
+    
+    
+    
